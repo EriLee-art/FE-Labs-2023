@@ -49,7 +49,34 @@ PART 2: Using ID or CLASS Selectors:
 */
 
 /* ↓ YOUR CSS CODE HERE ↓  */
+body {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
 
+h1 {
+  filter: drop-shadow(2px 2px 1px #0f6a9e);
+}
+
+p, li {
+  font-size: 20px;
+}
+
+img {
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+figcaption {
+  color: rgb(0, 58, 66);
+}
+
+footer {
+  text-align: center;
+}
 /* 
 The asterisk (*) selector targets every element on the page. It is called the UNIVERSAL SELECTOR. Using a temporary red border around elements can prove to be helpful with visualizing the CSS box-model. Seeing all of the margins, borders, and padding of all 
 of the elements on the page can help fix issues with spacing too, especially if you're new to CSS. 
@@ -103,6 +130,7 @@ footer {
 .banner-div {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 #banner-long {
   max-width: 100%;
@@ -110,10 +138,12 @@ footer {
 }
 #banner-short {
   width: 230px;
+  display: none;
 }
 .img-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .tips-div {
@@ -125,6 +155,8 @@ footer {
   max-width: 800px;
   margin: 5rem auto;
   color: rgb(253, 197, 132);
+  background-color: rgb(0, 58, 66);
+  border-radius: 1rem;
   padding: 1rem 2rem;
 }
 .top-places-div h2 {
@@ -143,6 +175,9 @@ footer {
 
 @media only screen and (max-width: 1100px) {
   .tips-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -161,8 +196,10 @@ footer {
     width: 230px;
   }
   #banner-long {
+    display: none;
   }
   #banner-short {
+    display: flex;
   }
 }
 /* ------------------------- */
